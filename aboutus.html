@@ -2,7 +2,14 @@
 
 	<head>
 		<title>About us</title>
-		<link href="default.css " rel="stylesheet"/>		
+		<link href="default.css " rel="stylesheet"/>	
+	<script>
+	function changeEventPic(type)
+	{
+	alert(type);
+	}
+</script>
+</head>		
 	</head>
 		
 	<body>		
@@ -26,19 +33,19 @@
 	</div>
 	
 	
-	<h2>WEEKLY EVENTS</h2>
+	<h2>WEEKLY EVENTS(&darr; Click me! &darr;)</h2>
 	<div id= "events">		
-	<img src="pictures/events/1.jpg" style="height:250px; width:400px;">
+	<img src="pictures/events/1.jpg" style="height:250px; width:400px;"  onclick="changeEventPic('events')">
 	</div>
 	
-	<h2>ICE BREAKER</h2>
+	<h2>ICE BREAKER(&darr; Click me! &darr;)</h2>
 	<div id="icebreaker">
-	<img src="pictures/ice breaker/1.jpg" style="height:250px; width:400px;">
+	<img src="pictures/ice breaker/1.jpg" style="height:250px; width:400px;" onclick="changeEventPic('icebreaker')">
 	</div>
 	
-	<h2>CLUB DAY</h2>
+	<h2>CLUB DAY(&darr; Click me! &darr;)</h2>
 	<div id="clubday">
-	<img src="pictures/club day/1.jpg" style="height:250px; width:400px;">
+	<img src="pictures/club day/1.jpg" style="height:250px; width:400px;" onclick="changeEventPic('clubday')">
 	</div>
 	
 
