@@ -1,6 +1,14 @@
-body {
+
+
+body.bg {
 	font-family:arial;
-	background:url(pictures/background.jpg)no-repeat;
+	background:url(../pictures/background.png)no-repeat center center fixed;
+	background-size:100% 100%;
+}
+
+body.bg2 {
+	font-family:arial;
+	background:url(../pictures/background2.jpg)no-repeat center center fixed;
 	background-size:100% 100%;
 }
 
@@ -30,3 +38,22 @@ text-align:center;
 color: #FFFFFF; 
 background-color: #711515; 
 } 
+/*
+#aboutus p{
+	background-color:gray;
+position:absolute;
+top:80%;
+color: 	#28004D;
+border: blue solid thin;
+
+}
+
+#events{
+position:absolute;
+top:10%;
+left:20%;
+
+}*/
+
+
+
