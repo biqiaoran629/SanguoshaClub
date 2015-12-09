@@ -2,7 +2,47 @@
 
 	<head>
 		<title>About us</title>
-		<link href="css/main.css" rel="stylesheet"/>		
+		<link href="css/main.css " rel="stylesheet"/>	
+		
+		
+	<script>
+	
+	var eventsID=1;
+	var icebreakerID=1;
+	var clubdayID = 1;
+	
+	function changeEventPic(type)
+	{
+	if(type=="events"){
+	eventsID = (eventsID+1) % 11;
+	if(eventsID==0)
+	eventsID=11;
+	element=document.getElementById('events')
+	element.src = 'pictures/events/' + eventsID + '.jpg';
+	
+	//alert(eventsID + 'pictures/events/' + eventsID + '.jpg');
+		
+	}
+	if(type=="icebreaker"){	
+	icebreakerID = (icebreakerID+1) % 8;
+	if(icebreakerID==0)
+	icebreakerID=8;
+	element=document.getElementById('icebreaker')
+	element.src = 'pictures/ice breaker/' + icebreakerID + '.jpg';		
+	
+	}
+	if(type=="clubday"){
+	clubdayID = (clubdayID+1) % 4;
+	if(clubdayID==0)
+	clubdayID=4;
+	element=document.getElementById('clubday')
+	element.src = 'pictures/club day/' + clubdayID + '.jpg';		
+	
+	}
+	
+	}
+</script>
+</head>		
 	</head>
 		
 	<body class="bg2">		
@@ -26,22 +66,21 @@
 	</div>
 	
 	
-	<h2>WEEKLY EVENTS</h2>
-	<div id= "events">		
-	<img src="pictures/events/1.jpg" style="height:250px; width:400px;">
+	<h2>WEEKLY EVENTS(&darr; Click me! &darr;)</h2>
+	<div>		
+	<img id="events" src="pictures/events/1.jpg" style="height:250px; width:400px;"  onclick="changeEventPic('events')">
 	</div>
 	
-	<h2>ICE BREAKER</h2>
-	<div id="icebreaker">
-	<img src="pictures/ice breaker/1.jpg" style="height:250px; width:400px;">
+	<h2>ICE BREAKER(&darr; Click me! &darr;)</h2>
+	<div">
+	<img id="icebreaker" src="pictures/ice breaker/1.jpg" style="height:250px; width:400px;" onclick="changeEventPic('icebreaker')">
 	</div>
 	
-	<h2>CLUB DAY</h2>
-	<div id="clubday">
-	<img src="pictures/club day/1.jpg" style="height:250px; width:400px;">
+	<h2>CLUB DAY(&darr; Click me! &darr;)</h2>
+	<div>
+	<img id="clubday" src="pictures/club day/1.jpg" style="height:250px; width:400px;" onclick="changeEventPic('clubday')">
 	</div>
 	
-
 	
 	</body>
 </html>
