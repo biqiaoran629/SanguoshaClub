@@ -2,7 +2,21 @@
 
 	<head>
 		<title>Sangox'a Club</title>
-		<link href="css/main.css" rel="stylesheet"/>		
+		<link href="css/main.css" rel="stylesheet"/>
+	<script>
+	function storeInDB()
+	{
+	
+	}
+	
+	function adminLogin()
+	{
+		if(document.getElementByid("pass").value=="admin123"){
+		alert("true");}
+		else{
+		alert("false");}
+	}
+</script>		
 	</head>
 		
 	<body class="bg2">	
@@ -15,5 +29,33 @@
 		<li><a href="joinus.html">Join Us</a></li>		
 	</ul>
 	</div>
+	
+	<div>
+	<h4>If you are interested in joining us, please fill in the information below and you will receive our weekly flyer!</h4>
+	</div>
+
+<form>
+	
+	name:<br />
+	<input type="text" name="name" value="" size="20">
+	<br />
+	email:<br />
+	<input type="text" name="mail" value="" size="20">
+	<br />
+	faculty:<br />
+	<input type="text" name="comment" value="" size="20">
+	<br /><br />
+	<button type="button" onclick="storeInDB()">Submit</button>
+	<input type="reset" value="Reset">
+
+</form>
+	
+	
+	<h4>If you are an admin, please enter the password below to see who's registered</h4>
+	<form>
+	<input id="pass" type = "password" name ="password">
+	<button type="button" onclick="adminLogin()">Submit</button>
+	</form>
+	
 	
 </html>
