@@ -1,0 +1,32 @@
+body {
+	font-family:arial;
+	background:url(pictures/background.jpg)no-repeat;
+	background-size:100% 100%;
+}
+
+#nav { 
+font-size: 90%; 
+margin:0 auto;
+align: center;
+} 
+#nav ul { 
+list-style: none; 
+margin: 0; 
+padding: 0; 
+padding-top: 1em; 
+} 
+#nav li { 
+display: inline; 
+} 
+#nav a:link, #nav a:visited { 
+padding: 0.4em 1em 0.4em 1em; 
+color: #FFFFFF; 
+background-color: #B51032; 
+text-decoration: none; 
+border: 1px solid #711515; 
+text-align:center;
+} 
+#nav a:hover { 
+color: #FFFFFF; 
+background-color: #711515; 
+} 
