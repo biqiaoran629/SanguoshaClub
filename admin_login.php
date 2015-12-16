@@ -32,7 +32,7 @@ td {
 		if ($result->num_rows > 0) {
 			echo '<table><tr> <td><h3>Name</h3></td> <td><h3>Email</h3></td> <td><h3>Faculty</h3></td>';
 			while($row = $result->fetch_assoc()) {
-				echo '<table><tr> <td><h3>'.$row["name"].'</h3></td> <td><h3>'.$row["email"].'</h3></td> <td><h3>'.$row["faculty"].'</h3></td>';
+				echo '<tr> <td><h3>'.$row["name"].'</h3></td> <td><h3>'.$row["email"].'</h3></td> <td><h3>'.$row["faculty"].'</h3></td></tr>';
 			}echo '</table>';
 		} else {
 			echo "0 result";
