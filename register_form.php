@@ -5,7 +5,7 @@
 <body>
 	<?php
 		$user = 'root';
-		$pass = '0723';
+		$pass = '';
 		$db = 'sanguoshaclub';
 	
 		$con = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
@@ -14,16 +14,16 @@
 		$email = $_GET["email"];
 		$faculty = $_GET["faculty"];
 
-		$sql = "SELECT * FROM member WHERE email = '$email'";
+		$sql = "SELECT * FROM members WHERE email = '$email'";
 		$result = $con->query($sql);
 		if ($result->num_rows > 0) {
 			echo "Email address you entered has already been registered please use another email !!";
 		} else {
 			if($faculty !=null){
-				$insert = "INSERT INTO member (name, email, faculty) 
+				$insert = "INSERT INTO members (name, email, faculty) 
 				VALUES('$name', '$email', '$faculty')";
 			}else{
-				$insert = "INSERT INTO member (name, email) 
+				$insert = "INSERT INTO members (name, email) 
 				VALUES('$name', '$email')";
 			}
 			if($con->query($insert) === TRUE)	{

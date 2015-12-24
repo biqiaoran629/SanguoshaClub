@@ -8,7 +8,7 @@ function adminLogin() {
 				}
 			}
 			xmlhttp.open("GET","admin_login.php", true);
-			xmlhttp.send();
+			xmlhttp.send();			
 		}
 		else{
 			alert("false");
@@ -65,6 +65,7 @@ function validateForm() {
 		}
 		xmlhttp.open("GET","register_form.php?name="+name+"&email="+email+"&faculty="+faculty, true);
 		xmlhttp.send();
+		alert("You have registered!")
 	}
 	return false;
 }
