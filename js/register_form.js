@@ -1,3 +1,22 @@
+function sendEmail() {
+		var pw = document.forms["AdminForm"]["pass"].value;
+		if(pw=="admin123"){
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("email").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET","admin_login.php", true);
+			xmlhttp.send();			
+		}
+		else{
+			alert("false");
+		}
+		return false;
+}
+
+
 function adminLogin() {
 		var pw = document.forms["AdminForm"]["pass"].value;
 		if(pw=="admin123"){
