@@ -37,7 +37,7 @@ td {
 		if ($result->num_rows > 0) {
 			echo '<table><tr> <td><h3>ID</h3></td> <td><h3>Name</h3></td> <td><h3>Email</h3></td> <td><h3>Faculty</h3></td> <td><h3>Timestamp</h3></td> <td><h3>Operation</h3></td></tr>';
 			while($row = $result->fetch_assoc()) {
-				echo '<tr> <td><h3>'.$row["ID"].'</h3></td><td><h3>'.$row["name"].'</h3></td> <td><h3>'.$row["email"].'</h3></td> <td><h3>'.$row["faculty"].'</h3></td> <td><h3>'.$row["ts"].'</h3></td>   <td><a href="delete.php?id="<?php echo $row["ID"];?"> Delete this row</a></td></tr>';
+				echo '<tr> <td><h3>'.$row["ID"].'</h3></td><td><h3>'.$row["name"].'</h3></td> <td><h3>'.$row["email"].'</h3></td> <td><h3>'.$row["faculty"].'</h3></td> <td><h3>'.$row["ts"].'</h3></td>   <td><a href="delete.php?id='.$row["ID"].'"> Delete this row</a></td></tr>';
 			}echo '</table>';
 		} else {
 			echo "0 result";
