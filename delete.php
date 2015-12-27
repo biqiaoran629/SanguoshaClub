@@ -3,18 +3,20 @@
 
 <?php
 	$myid = $_GET["id"];
-
 	$user = 'root';
-	$pass = '';
+	$pass = '0723';
 	$db = 'sanguoshaclub';
 	
 	$con = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
 	
-	mysql_select_db("my_db", $con);
+	$sql = "delete from members where ID='$myid'";
+	if ($con->query($sql) === TRUE) {
+		echo "Record deleted successfully";
+	} else {
+		echo "Error deleting record: " . $con->error;
+	}
 
-	mysql_query("DELETE FROM members WHERE ID='$myid'");
-
-	mysql_close($con);
+	$con->close();
 ?>
 
 

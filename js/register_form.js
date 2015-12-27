@@ -35,6 +35,20 @@ function adminLogin() {
 		return false;
 }
 
+
+function deleteMem(id) {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				document.getElementById("result").innerHTML = xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","delete.php?id="+id, true);
+		xmlhttp.send();
+
+		return false;
+}
+
 function validateForm() {
     var name = document.forms["RegForm"]["name"].value;
     var email = document.forms["RegForm"]["email"].value;
