@@ -9,6 +9,14 @@
 		$db = 'sanguoshaclub';
 	
 		$con = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+		
+		$sql = "SELECT COUNT(*) FROM members";
+		$result = $con->query($sql);
+		$row = $result->fetch_assoc();
+		$num = $row["COUNT(*)"] + 1;
+		echo $num." Users have registered!";
+		
+   
 
 		$name = $_GET["name"];
 		$email = $_GET["email"];
